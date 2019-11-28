@@ -21,7 +21,7 @@
 
 ## 简介
 
-古生物谱系构建系统，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。包含了 Element UI & axios & iconfont & permission control & lint，这些搭建后台必要的东西。
+古生物谱系构建系它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。包含了 Element UI & axios & iconfont & permission control & lint，这些搭建后台必要的东西。
 
 
 
