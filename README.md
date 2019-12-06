@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://github.com/utopfish/vue-pedigreeTree/blob/master/src/assets/logo_%E9%80%8F%E6%98%8E%E5%9B%BE%E5%B1%82.png" alt="KoBVud.png" border="0" />
+ <img src="https://github.com/utopfish/vue-pedigreeTree/blob/master/src/assets/logo.PNG" alt="KoBVud.png" border="0" />
 </p>
 
 <p align="center">
