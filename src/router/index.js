@@ -30,8 +30,6 @@ import Layout from '@/layout'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-// 配置路由
-// 注意：路径中的@是webpack设置的alias路径别名，指src
 export const constantRoutes = [
   {
     path: '/login',
@@ -51,8 +49,8 @@ export const constantRoutes = [
     redirect: '/dashboard',
     children: [{
       path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
+      name: 'dashboard',
+      component: () => import('@/views/dashboard/index.vue'),
       meta: { title: '网站简介', icon: 'dashboard' }
     }]
   },
@@ -60,43 +58,54 @@ export const constantRoutes = [
   {
     path: '/functionModule',
     component: Layout,
-    redirect: '/functionModule/scrapyDate/index',
-    name: 'FunctionModule',
-    meta: { title: '功能模块', icon: 'example' },
+    redirect: '/functionModule/scrapy-info',
+    name: 'functionModule',
+    meta: { title: '功能模块', icon: 'functionModule' },
     children: [
       {
-        path: 'scrapyData',
-        name: 'ScrapyData',
-        component: () => import('@/views/functionModule/scrapyData/index'),
-        meta: { title: '爬虫搜索数据', icon: 'table' }
+        path: 'scrapy-info',
+        name: 'scrapy-info',
+        component: () => import('@/views/functionModule/scrapy-info.vue'),
+        meta: { title: '爬虫搜索数据', icon: 'scrapy-info' }
       },
       {
-        path: 'platformData',
-        name: 'PlatformData',
-        component: () => import('@/views/functionModule/platformData/index'),
-        meta: { title: '共享平台数据', icon: 'tree' }
+        path: 'platform-data',
+        name: 'platform-data',
+        component: () => import('@/views/functionModule/platform-data.vue'),
+        meta: { title: '共享平台数据', icon: 'platform-data' }
       },
       {
-        path: 'experimentalPlatform',
-        name: 'ExperimentalPlatform',
-        component: () => import('@/views/functionModule/experimentalPlatform/index'),
-        meta: { title: '实验平台', icon: 'tree' }
+        path: 'upload-data',
+        name: 'upload-data',
+        component: () => import('@/views/functionModule/upload-data.vue'),
+        meta: { title: '实验平台', icon: 'upload-data' }
       }
     ]
   },
-
   {
     path: '/documentation',
     component: Layout,
     children: [
       {
-        path: 'documentation',
-        name: 'Documentation',
+        path: 'index',
         component: () => import('@/views/documentation/index'),
-        meta: { title: '相关论文', icon: 'form' }
+        name: 'Documentation',
+        meta: { title: '相关论文', icon: 'documentation', affix: true }
       }
     ]
   },
+  // {
+  //   path: '/form',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'Form',
+  //       component: () => import('@/views/form/index'),
+  //       meta: { title: 'Form', icon: 'form' }
+  //     }
+  //   ]
+  // },
 
 
   // 404 page must be placed at the end !!!
