@@ -41,7 +41,7 @@
         <el-button
           size="mini"
           type="primary"
-          @click="check(scope.$index)">Edit</el-button>
+          @click="check(scope.$index)">查看</el-button>
       </template>
     </el-table-column>
   </el-table>
